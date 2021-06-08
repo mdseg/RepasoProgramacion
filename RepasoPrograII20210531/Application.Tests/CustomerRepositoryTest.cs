@@ -16,7 +16,7 @@ namespace Application.Tests
         public void CreateSuccessfullyTest()
         {
             //Arrange
-            CustomerRepository repository = new CustomerRepository();
+            RepositoryBase<Customer> repository = new CustomerRepositorySQL();
 
             int millisecond = DateTime.Now.Millisecond;
 
@@ -46,7 +46,7 @@ namespace Application.Tests
         public void GetAllTest()
         {
             //Arrange
-            CustomerRepository target = new CustomerRepository(); 
+            RepositoryBase<Customer> target = new CustomerRepositorySQL();
             List<Customer> expected = target.GetAll();
             List<Customer> actual;
             bool output = false;
@@ -73,9 +73,9 @@ namespace Application.Tests
         public void GetByIdTest()
         {
             //Arrange
-            CustomerRepository target = null; // TODO: Inicializar de manera apropiada
+            RepositoryBase<Customer> target = new CustomerRepositorySQL();
             long entityId = 1;
-            Customer expected = null; // TODO: Inicializar de manera apropiada 
+            Customer expected = target.GetById(entityId); // TODO: Inicializar de manera apropiada 
             Customer actual;
 
             //Act
@@ -93,11 +93,15 @@ namespace Application.Tests
         public void RemoveTest()
         {
             //Arrange
-            CustomerRepository target = null; // TODO: Inicializar de manera apropiada 
+            RepositoryBase<Customer> target = new CustomerRepositorySQL();
             Customer entity = null;// TODO: Inicializar de manera apropiada
             entity.Id = 1;
+            
             target.Remove(entity);
             Customer actual;
+
+            target.GetById(1);
+            
 
             //Act
 

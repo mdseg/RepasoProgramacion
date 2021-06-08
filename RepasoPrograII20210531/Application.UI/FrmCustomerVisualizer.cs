@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using Application.Repositories;
 using Application.Models;
@@ -7,8 +7,8 @@ namespace WindowsFormsApp1
 {
     public partial class FrmCustomerVisualizer : Form
     {
-        CustomerRepository customerRepository;
-        public FrmCustomerVisualizer(CustomerRepository customerRepository)
+        CustomerRepositorySQL customerRepository;
+        public FrmCustomerVisualizer(CustomerRepositorySQL customerRepository)
         {
             InitializeComponent();
             this.customerRepository = customerRepository;

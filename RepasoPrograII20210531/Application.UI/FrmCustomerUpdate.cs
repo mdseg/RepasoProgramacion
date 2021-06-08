@@ -1,4 +1,4 @@
-﻿using Application.Models;
+using Application.Models;
 using Application.Repositories;
 using System;
 using System.Windows.Forms;
@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
     {
         Customer auxCustomer;
 
-        public FrmCustomerUpdate(CustomerRepository customerRepository, Customer customer) : base(customerRepository)
+        public FrmCustomerUpdate(CustomerRepositorySQL customerRepository, Customer customer) : base(customerRepository)
         {
             this.auxCustomer = customer;
 

@@ -75,9 +75,21 @@ namespace Application.Repositories
 
         public override Customer GetById(long entityId)
         {
-            int id = (int)entityId;
-            Customer output = customers[id];
-            return output;
+            try
+            {
+                foreach (Customer item in customers)
+                {
+                    if (item.Id == entityId)
+                    {
+                        return item;
+                    }
+                }
+                throw new Exception("No se encontró ese ID");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public override void Remove(Customer entity)

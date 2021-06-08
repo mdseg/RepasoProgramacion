@@ -1,4 +1,4 @@
-﻿using Application.Helpers;
+using Application.Helpers;
 using Application.Models;
 using Application.Repositories;
 using System;
@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     public partial class FrmCustomer : Form
     {
-        protected CustomerRepository customerRepository;
+        protected CustomerRepositorySQL customerRepository;
 
 
         public FrmCustomer()
@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public FrmCustomer(CustomerRepository customerRepository):this()
+        public FrmCustomer(CustomerRepositorySQL customerRepository):this()
         {
             this.customerRepository = customerRepository;
         }

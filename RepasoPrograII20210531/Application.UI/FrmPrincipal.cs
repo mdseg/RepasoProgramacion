@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using Application.Repositories;
 using Application.Helpers;
@@ -7,11 +7,11 @@ namespace WindowsFormsApp1
 {
     public partial class FrmPrincipal : Form
     {
-        CustomerRepository customerRepository;
+        CustomerRepositorySQL customerRepository;
         public FrmPrincipal()
         {
             InitializeComponent();
-            this.customerRepository = new CustomerRepository();
+            this.customerRepository = new CustomerRepositorySQL();
 
         }
 

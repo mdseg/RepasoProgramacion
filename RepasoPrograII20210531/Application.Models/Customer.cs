@@ -9,6 +9,7 @@ namespace Application.Models
 {
     public class Customer : Entity
     {
+
         private string name;
         private string lastName;
         private int age;
@@ -16,11 +17,13 @@ namespace Application.Models
         public int Age { get { return this.age; } set { this.age = value; } }
         public string LastName { get { return this.lastName; } set { this.lastName = value; } }
 
+
+
         public Customer()
         {
 
         }
-        public Customer(string name, string lastName, int age)
+        public Customer(string name, string lastName, int age)        
         {
             this.name = name;
             this.lastName = lastName;
